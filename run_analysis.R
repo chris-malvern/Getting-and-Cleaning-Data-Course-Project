@@ -41,4 +41,4 @@ colnames(data_mix) <- feat_names		# now dim() is 10299  50
 dm <- tbl_df(data_mix)
 dm2 <- dm %>% unique %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 
-write.table(dm2, file='cleaning.txt', row.name=FALSE); closeAllConnections()
+write.table(dm2, file='summary_samsung_data.txt', row.name=FALSE); closeAllConnections()
