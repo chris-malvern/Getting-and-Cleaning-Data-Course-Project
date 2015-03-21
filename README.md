@@ -11,11 +11,14 @@ tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z, tBodyAcc_std_X, tBodyAcc_std_
 ##### the following code will open the summary file, if put in R's working directory:
 data <- read.table('summary_samsung_data.txt', header = TRUE)
 
+##### recreate the cleaned/tidied summary:
+if the directory 'UCI HAR Dataset' containing the original dataset is in the working directory, alongside a copy of 'run_analysis.R', running source('run_analysis.R') will recreate the summary.   
+
 ##### the raw dataset was processed thus: 
 * combine data from both the test (9 subjects) and the training (21 subjects) groups. 
 * remove parameter measurements not relating to means or standard deviations
-* some editing of the parameter names
+* some editing of the parameter names : removed brackets.
 * merging of the test results with the subject IDs and description of the 6 activities undergone
-* grouping of data by subject ID and activity: 6*30 groups.
+* grouping of data by subject ID and activity: 6*30 = 180 groups.
 * summarisation of each group to provide the mean of each parameter
 
